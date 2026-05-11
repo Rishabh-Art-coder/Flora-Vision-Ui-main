@@ -58,16 +58,9 @@
       padding: 100px 24px 24px 24px;
     }
 
-    h3 {
-      margin: 0 0 10px 0;
-      color: #1f2937;
-    }
+    
 
-    p {
-      color: #4b5563;
-      line-height: 1.5;
-    }
-
+   
     .navbar {
     display: flex;
     align-items: center;
