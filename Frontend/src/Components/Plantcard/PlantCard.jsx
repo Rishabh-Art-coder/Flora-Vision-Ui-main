@@ -2,7 +2,7 @@ import React from 'react';
 import plantImage from "../../assets/plant1.png"; 
 import "./plant.css";
 
-export default function PlantCard() {
+export default function PlantCard({title , subtitle, price, image}) {
   return (
     <div className="plant-card-container">
       {/* Background shape layer */}
@@ -13,8 +13,8 @@ export default function PlantCard() {
         
         <div className="absolute -top-23 left-30 -translate-x-1/2 w-[180px] h-[180px] z-20 pointer-events-none">
           <img 
-            src={plantImage} 
-            alt="Aglaonema plant" 
+            src={image} 
+            alt={title} 
             className=" object-contain font-size-2xl" 
           />
         </div>
@@ -22,16 +22,16 @@ export default function PlantCard() {
         {/* 2. Text Details Area */}
         <div className="mt-10 text-left">
           <h3 className="font-medium text-2xl tracking-wide text-stone-200 mb-2">
-            Aglaonema plant
+            {title}
           </h3>
           <p className="text-stone-400 text-[20px] leading-relaxed font-normal mb-6">
-            The Aglaonema plant, commonly known as Chinese Evergreen, known for its attractive foliage and ease of care.
+            {subtitle}
           </p>
         </div>
 
         {/* 3. Price and Bag Button Layout */}
         <div className="flex justify-between items-center mt-auto">
-          <span className="text-white text-lg font-medium">Rs.300/-</span>
+          <span className="text-white text-lg font-medium">Rs.{price} /-</span>
           <button className="w-10 h-10 border border-stone-600 rounded-xl flex items-center justify-center hover:bg-stone-800 transition-colors  mr-5">
             {/* Bag Icon */}
             <svg xmlns="w3.org" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 text-stone-300">

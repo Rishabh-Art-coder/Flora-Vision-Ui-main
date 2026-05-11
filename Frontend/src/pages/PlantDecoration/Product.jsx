@@ -1,8 +1,11 @@
 import React from 'react';
 import plantImage1 from '../../assets/plant2.png'; // Ensure you have the correct path to your plant image1
+import Subtitles from '../../Components/Subtitles/Subtitiles';
 
 export default function Description() {
   return (<>
+
+   <Subtitles text="Our Trendy Plants" />
     <div className="flex justify-center mt-20 overflow-visible w-[95%]  mx-auto">
 
       {/* <!-- Main Card --> */}

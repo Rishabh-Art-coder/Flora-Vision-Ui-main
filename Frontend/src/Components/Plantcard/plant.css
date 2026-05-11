@@ -24,7 +24,7 @@
 }
 
 .plant-card-content {
-  width: 290px;
+  width: 80%;
   position: relative;
   z-index: 2;
   padding: 48px 24px 24px;
