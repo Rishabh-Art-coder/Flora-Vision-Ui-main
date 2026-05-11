@@ -1,9 +1,12 @@
-export default function PlantCard() {
+import React from 'react';
+import plantImage1 from '../../assets/plant2.png'; // Ensure you have the correct path to your plant image1
+
+export default function Description() {
   return (<>
-    <div class="flex justify-center -mt-20 mx-20 overflow-visible">
+    <div className="flex justify-center mt-20 overflow-visible w-[95%]  mx-auto">
 
       {/* <!-- Main Card --> */}
-      <div class="
+      <div className=" w-full
     relative
     rounded-[60px]
     border border-white/20
@@ -11,40 +14,42 @@ export default function PlantCard() {
     backdrop-blur-[40px]
     flex items-center
     px-14
-    w-[80%]
+    
     h-[340px]
-    mx-10
+  
     overflow-visible
     ">
 
         {/* <!-- Left Plant --> */}
-        <div class="relative w-1/2 h-full overflow-visible">
+        <div className="relative w-1/2 h-full overflow-visible">
 
-          <img src="/b48312dbddc890f7f35ef3964ae1e7900b89782c.png" alt="plant" class="
+          <img src={plantImage1} alt="plant" className="
         absolute
-        -top-[400px] 
+        -top-[150px] 
         -left-20
-        w-[760px]
-        h-[980px]
+        w-[700px]
+        h-[500px]
         object-contain
-        z-20
+        z-10
         pointer-events-none
-        " style="
-          filter: drop-shadow(0px 27px 80px rgba(0,0,0,0.35));
-        " />
+        "
+            style={{
+              filter: "drop-shadow(0px 27px 80px rgba(0,0,0,0.35))"
+            }}
+          />
 
         </div>
 
         {/* <!-- Right Content --> */}
-        <div class="w-1/2 text-white relative z-30">
+        <div className="w-1/2 text-white relative z-30">
 
           {/* <!-- Heading --> */}
-          <h2 class="text-[38px] font-semibold leading-[100%] tracking-[0%] font-[Inter]">
+          <h2 className="text-[38px] font-semibold leading-[100%] tracking-[0%] font-[Inter]">
             For Your Desks Decorations
           </h2>
 
           {/* <!-- Description --> */}
-          <p class="
+          <p className="
         mt-5
         text-[17px]
         leading-[160%]
@@ -60,15 +65,15 @@ export default function PlantCard() {
           </p>
 
           {/* <!-- Price --> */}
-          <h3 class="mt-7 text-[28px] font-semibold">
+          <h3 className="mt-7 text-[28px] font-semibold">
             Rs. 599/-
           </h3>
 
-          {/* <!-- Buttons --> */}  
-          <div class="flex items-center gap-4 mt-7">
+          {/* <!-- Buttons --> */}
+          <div className="flex items-center gap-4 mt-7">
 
             {/* <!-- Explore --> */}
-            <button class="
+            <button className="
           w-[150px]
           h-[46px]
           rounded-[12px]
@@ -86,7 +91,7 @@ export default function PlantCard() {
             </button>
 
             {/* <!-- Bag -->   */}
-            <button class="
+            <button className="
           w-[46px]
           h-[46px]
           rounded-[12px]
