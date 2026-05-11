@@ -1,0 +1,35 @@
+.plant-card-container {
+  position: relative;
+  width: 360px; 
+  height: 360px; 
+  margin-top: 120px;
+  /* border: 2px solid white; */
+}
+
+.plant-card-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: Transparent; */
+  /* border: 2px solid white; */
+  clip-path: path(
+    "M 40 0 Q 130 35 220 0 Q 260 0 260 40 L 260 320 Q 260 360 220 360 L 40 360 Q 0 360 0 320 L 0 40 Q 0 0 40 0 Z"
+  );
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.1);
+   backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+}
+
+.plant-card-content {
+  width: 290px;
+  position: relative;
+  z-index: 2;
+  padding: 48px 24px 24px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
