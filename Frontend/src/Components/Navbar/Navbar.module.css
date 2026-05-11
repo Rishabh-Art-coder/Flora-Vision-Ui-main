@@ -1,185 +1,199 @@
-.nav-links a {
-      /* color: rgba(255, 255, 255, 0.7); */
-      color: #ffffff;
+main {
+  flex: 3;
+  position: relative;
+}
 
-      transition: color 0.2s ease-in-out;
-    }
+.card {
+  width: 300px;
+  height: 400px;
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  font-family: sans-serif;
+}
 
-    main {
-      flex: 3;
-      /* background-color: purple; */
-      /* fill: purple;  Color svg separator will inherit from */
-      position: relative;
-    }
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: #4f46e5;
+  clip-path: path("M 0 0 L 300 0 L 300 50 Q 150 90 0 50 Z");
+}
 
-    /* svg {
-      width: 100%;
-      height: 50px;
-      position: absolute;
-      top: 100%;
-      fill: inherit;
-    } */
+.card-content {
+  position: relative;
+  z-index: 2;
+  padding: 100px 24px 24px 24px;
+}
 
-    footer {
-      flex: 1;
-      padding-top: 50px;
-      /* svg separator height */
-      background-color: gold;
-    }
-
-    .card {
-      width: 300px;
-      height: 400px;
-      background: #ffffff;
-      /* Four corners rounded */
-      border-radius: 24px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      position: relative;
-      overflow: hidden;
-      font-family: sans-serif;
-    }
-
-    /* Top inside curve effect using a clip-path pseudo-element */
-    .card::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 80px;
-      background: #4f46e5;
-      /* Creates an inside/inward dip curve at the top */
-      clip-path: path('M 0 0 L 300 0 L 300 50 Q 150 90 0 50 Z');
-    }
-
-    .card-content {
-      position: relative;
-      z-index: 2;
-      padding: 100px 24px 24px 24px;
-    }
-
-    
-
-   
-    .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 28px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    width: 100%;
-    /* background: rgba(13,26,15,0.85); */
-    /* backdrop-filter: blur(12px); */
-    /* border-bottom: 0.5px solid var(--green-border); */
-  }
-
-  .logo {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-family: var(--font-display);
-    font-size: 17px;
-    font-weight: 600;
-    color: var(--text-white);
-    text-decoration: none;
-  }
-
-  .logoIcon {
-    font-size: 20px;
-  }
-
-  .logoName {
-    color: #ffffff;
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 28px;
-    list-style: none;
-  }
-
-  .navLinks{
-    color: var(--text-muted);
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 400;
-    transition: color 0.2s;
-  }
-
-   .navLinks:hover { color: var(--text-white); }
-
-  .nav-links .dropdown {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-  }
-
-  .nav-links .dropdown::after {
-    content: '▾';
-    font-size: 10px;
-  }
-
- .navRight {
+.navbar {
   display: flex;
   align-items: center;
-  gap: 18px;
+  justify-content: space-between;
+  padding: 16px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  gap: 12px;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    padding: 20px 28px;
+    gap: 28px;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-white);
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    font-size: 17px;
+  }
+}
+
+.logoIcon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.logoName {
+  color: #ffffff;
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .logoName {
+    display: inline;
+  }
+}
+
+.navList {
+  display: none;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .navList {
+    display: flex;
+  }
+}
+
+.navLink {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+
+.navLink:hover {
+  color: #ffffff;
+}
+
+.dropdown {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.dropdown::after {
+  content: "▾";
+  font-size: 10px;
+}
+
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .navRight {
+    gap: 18px;
+  }
 }
 
 .navIcons {
-  /* color: var(--text-white); */
   color: #ffffff;
   cursor: pointer;
-  font-size: 25px;
+  font-size: 22px;
   transition: color 0.2s;
   background: none;
   border: none;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .navIcons {
+    font-size: 25px;
+    padding: 0;
+  }
 }
 
 .navIcons:hover {
-  /* color: var(--text-white);
-   */
-
-   color: #ffffff;
+  color: #ffffff;
 }
 
 .hamburger {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  gap: 4px;
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0;
+  padding: 6px;
   color: #ffffff;
-  font-size: 25px;
+  font-size: 24px;
+  flex-shrink: 0;
+  transition: color 0.2s;
+}
+
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+.hamburger:hover {
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .hamburger span {
-  width: 22px;
-  height: 2px;
-  background: var(--text-muted);
+  display: block;
+  width: 20px;
+  height: 1.5px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 2px;
   transition: 0.2s;
 }
 
 .hamburger:hover span {
-  background: var(--text-white);
+  background: #ffffff;
 }
-
-  .hamburger {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    cursor: pointer;
-    padding: 4px;
-  }
-
-  .hamburger span {
-    display: block;
-    width: 20px;
-    height: 1.5px;
-    /* background: var(--text-muted); */
-    border-radius: 2px;
-  }

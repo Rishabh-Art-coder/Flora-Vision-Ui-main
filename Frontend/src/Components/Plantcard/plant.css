@@ -1,9 +1,25 @@
 .plant-card-container {
   position: relative;
-  width: 360px; 
-  height: 360px; 
-  margin-top: 120px;
-  /* border: 2px solid white; */
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 1;
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 640px) {
+  .plant-card-container {
+    max-width: 280px;
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .plant-card-container {
+    max-width: 260px;
+    margin-top: 50px;
+  }
 }
 
 .plant-card-bg {
@@ -12,24 +28,35 @@
   left: 0;
   width: 100%;
   height: 100%;
-  /* background: Transparent; */
-  /* border: 2px solid white; */
-  clip-path: path(
-    "M 40 0 Q 130 35 220 0 Q 260 0 260 40 L 260 320 Q 260 360 220 360 L 40 360 Q 0 360 0 320 L 0 40 Q 0 0 40 0 Z"
-  );
+  /* Fixed link reference to ensure absolute scaling fluidly across any resolution */
+  clip-path: url(#responsive-card-clip);
   z-index: 1;
   background: rgba(255, 255, 255, 0.1);
-   backdrop-filter: blur(10px);
--webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .plant-card-content {
-  width: 80%;
+  width: 100%;
   position: relative;
   z-index: 2;
-  padding: 48px 24px 24px;
+  padding: 40px 20px 20px;
   height: 100%;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 640px) {
+  .plant-card-content {
+    padding: 30px 16px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .plant-card-content {
+    padding: 25px 14px 14px;
+  }
 }
