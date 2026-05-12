@@ -4,7 +4,7 @@ import reviewData from "../Components/TestimonialCard/reviews.js"
 export default function Customer() {
   return (
     <>
-      <div className="min-h-screen  px-10 py-20">
+      <div className="min-h-screen bg-[#1b2b22] px-10 py-20">
       <Subtitles text="Customers Review" />
        
         {/* 3 Cards Per Row */}

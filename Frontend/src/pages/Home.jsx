@@ -18,10 +18,13 @@ export default function Home({ style }) {
         <HeroBanner />
         <Description />
         <Product2 />
+        <div className='bg-[#1b2b22]'> 
+
         <Plants />
         <Customers />
         <PlantFeatureCard />
         <Footer />
+        </div>
         {/* <TestimonialCard/> */}
       </div>
     </>

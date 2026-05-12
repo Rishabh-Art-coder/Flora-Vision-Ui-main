@@ -1,10 +1,11 @@
 import React from 'react';
 import plantImage from "../.././assets/plant1.png";
 import Subtitles from "../Subtitles/Subtitiles";
+import Button from '../Button/Button';
 function HeroBanner() {
   return (
     <>
-     
+
 
       <main class="flex flex-col justify-between  relative   md:mx-[50px] ">
         <section class="w-full flex items-center  md:px-10 pt-10">
@@ -26,9 +27,7 @@ function HeroBanner() {
             {/* <!-- Buttons --> */}
             <div class="flex items-center gap-5 mt-7">
 
-              <button class="px-8 py-3 border border-white rounded-xl text-white text-[16px] f">
-                Buy Now
-              </button>
+              <Button btName="Buy Now "></Button>
 
               <button class="flex items-center gap-3 text-white">
                 <span class="w-12 h-12 border border-white rounded-full flex items-center justify-center text-sm">
@@ -77,14 +76,7 @@ function HeroBanner() {
               </div>
 
               {/* <!-- Buy Button --> */}
-              <button class="mt-6 w-[120px] h-[40px]
-            border border-white/30
-            rounded-xl
-            text-white text-[16px]
-            font-light hover:bg-white
-            hover:text-black transition-all duration-300">
-                Buy Now
-              </button>
+            <Button btName  = "Buy Now"/>
             </div>
 
             {/* <!-- Bottom Dots --> */}

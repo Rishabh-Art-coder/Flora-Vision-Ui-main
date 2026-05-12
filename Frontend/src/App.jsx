@@ -15,7 +15,8 @@ function App() {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          minHeight: "2000px"
+          height: "2000px"
+          // minHeight: "1000px"
         }}
       />
     </>

@@ -13,12 +13,12 @@ export default function Footer() {
             <span className="text-white text-xl sm:text-2xl font-bold tracking-tight">FloraVision.</span>
           </div>
           
-          <p className="text-gray-400 text-xs sm:text-sm max-w-sm font-light leading-relaxed">
+          <p className="text-white font-bold text-xs sm:text-sm max-w-sm  leading-relaxed">
             "From lush indoor greens to vibrant outdoor blooms, our plants are crafted to thrive and elevate your living environment."
           </p>
           
           {/* Social Links matching image casing */}
-          <div className="flex items-center gap-4 sm:gap-6 text-xs font-semibold tracking-wider text-gray-300 mt-2 sm:mt-4">
+          <div className="flex items-center gap-4 sm:gap-6 text-xl font-bold tracking-wider text-gray-300 mt-2 sm:mt-4">
             <a href="#" className="hover:text-white transition-colors">FB</a>
             <a href="#" className="hover:text-white transition-colors">TW</a>
             <a href="#" className="hover:text-white transition-colors">LI</a>
@@ -27,19 +27,19 @@ export default function Footer() {
 
         {/* Center Column: Quick Links */}
         <div className="flex flex-col sm:pl-0 md:pl-12">
-          <h3 className="text-white font-bold text-sm sm:text-base mb-4 sm:mb-6">Quick Link's</h3>
+          <h3 className="text-white font-[700px] text-sm sm:text-base mb-4 sm:mb-6">Quick Link's</h3>
           <ul className="flex flex-col gap-2 sm:gap-3 text-xs sm:text-sm text-gray-400">
             <li>
-              <a href="#" className="underline decoration-gray-500 hover:text-white hover:decoration-white transition-colors">Home</a>
+              <a href="#" className="underline  font-bold   text-white hover:decoration-white transition-colors">Home</a>
             </li>
             <li>
-              <a href="#" className="underline decoration-gray-500 hover:text-white hover:decoration-white transition-colors">Type's Of plant's</a>
+              <a href="#" className="underline font-bold  text-white hover:decoration-white transition-colors">Type's Of plant's</a>
             </li>
             <li>
-              <a href="#" className="underline decoration-gray-500 hover:text-white hover:decoration-white transition-colors">Contact</a>
+              <a href="#" className="underline font-bold  text-white hover:decoration-white transition-colors">Contact</a>
             </li>
             <li>
-              <a href="#" className="underline decoration-gray-500 hover:text-white hover:decoration-white transition-colors">Privacy</a>
+              <a href="#" className="underline  font-bold  text-white hover:decoration-white transition-colors">Privacy</a>
             </li>
           </ul>
         </div>
